@@ -123,11 +123,16 @@ STATIC_URL = '/static/'
 # STATIC_ROOT = '/static2/'
 # STATIC_URL = 'https://moriryuta.gonna.jp/moriryuta/mychat/static/'
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'static/static')
+# STATIC_ROOT = os.path.join(BASE_DIR, 'static/static')
 
 #css読み込み用
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, "static"),
+# STATICFILES_DIRS = [
+#     os.path.join(BASE_DIR, "static"),
+# ]
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+STATICFILES_DIRS =[
+   os.path.join(BASE_DIR, 'carzone/static'),
 ]
 
 
