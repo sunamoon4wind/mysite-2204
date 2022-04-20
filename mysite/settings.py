@@ -121,7 +121,7 @@ USE_TZ = True
 
 # STATIC_URL = '/static/'
 # STATIC_ROOT = '/static2/'
-STATIC_URL = '	https://moriryuta.gonna.jp/moriryuta/mychat/static/'
+STATIC_URL = 'https://moriryuta.gonna.jp/moriryuta/mychat/static/'
 
 #css読み込み用
 STATICFILES_DIRS = [
