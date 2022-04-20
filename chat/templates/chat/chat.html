@@ -1,0 +1,52 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <script src="{% static 'js/p5.min.js' %}"></script>
+    <title>弾幕くん</title>
+
+</head>
+
+<body>
+    <div id="div_container">
+
+        <div id="div_header">
+            <h1>弾幕くん</h1>
+        </div>
+
+        <div id="div_main">
+            <div id="div_join_screen">
+                <!-- エンターキーによるボタン押下を行うために、<button>ではなく<form>と<input type="submit">を使用。
+                ボタン押下(=submit)時にページリロードが行われないように、onsubmitの設定の最後に"return false;"を追加。-->
+                <form action="" onsubmit="onsubmitButton_JoinChat(); return false;"
+                    style="text-align: center; width: 100%;">
+                    ユーザーネーム<br />
+                    <input type="text" id="input_username" placeholder="名前を入力してください" autofocus><br /><br />
+                    <input type="submit" value="はじめる" />
+                </form>
+            </div>
+
+            <div id="div_chat_screen">
+                <button onclick="onclickButton_LeaveChat()">終了する</button><br />
+                ユーザーネーム : <input type="text" id="text_username" readonly="readonly"><br />
+                <!-- エンターキーによるボタン押下を行うために、<button>ではなく<form>と<input type="submit">を使用。
+                ボタン押下(=submit)時にページリロードが行われないように、onsubmitの設定の最後に"return false;"を追加。-->
+                <form action="" onsubmit="onsubmitButton_Send(); return false;">
+                    コメント : <input type="text" id="input_message" autocomplete="off" autofocus /><input type="submit"
+                        value="送信" />
+                </form>
+
+                <ul id="list_message"></ul>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="{% static 'js/app.js' %}"></script>
+
+</body>
+
+</html>
