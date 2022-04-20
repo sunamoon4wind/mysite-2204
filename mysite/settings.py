@@ -130,9 +130,9 @@ STATIC_URL = '/static/'
 #     os.path.join(BASE_DIR, "static"),
 # ]
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+STATIC_ROOT = os.path.join(BASE_DIR, 'deploy')
 STATICFILES_DIRS =[
-   os.path.join(BASE_DIR, 'carzone/static'),
+   os.path.join(BASE_DIR, 'static'),
 ]
 
 
