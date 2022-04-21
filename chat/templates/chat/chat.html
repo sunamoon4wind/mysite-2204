@@ -132,7 +132,8 @@
 
         // WebSocketオブジェクト
         let ws_scheme = window.location.protocol == "https:" ? "wss" : "ws";
-        const g_socket = new WebSocket(ws_scheme + "://" + window.location.host + "/ws/chat/");
+        //const g_socket = new WebSocket(ws_scheme + "://" + window.location.host + "/ws/chat/");
+        const g_socket = new WebSocket(ws_scheme + "://" + window.location.host);
         //const g_socket = new ReconnectingWebSocket(ws_scheme + "://" + window.location.host + "/ws/chat/");
 
         //sketch用
